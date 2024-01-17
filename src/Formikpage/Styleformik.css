@@ -1,0 +1,12 @@
+*{
+    margin: 5px;
+    padding: 10px;
+    
+}
+.error{
+    color: red;
+  }
+  .page{
+    background-color: aqua;
+    text-align: left;
+  }

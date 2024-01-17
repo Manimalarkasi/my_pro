@@ -1,0 +1,24 @@
+.ful{
+    background-image: url('C:\Users\SightSpectrum\Pictures\Saved Pictures/5.jpg');
+    
+    color: blueviolet;
+}
+
+.sign{
+    padding: 20px;
+    height: 72vh;
+    width: 500px;
+    margin: 20px auto ;
+    /* box-shadow: 13px 15px #2be234; */
+color: brown;
+background-color: aqua;
+    color: chartreuse;
+}
+.signin{
+    background-image: url("C:\Users\SightSpectrum\Pictures\Saved Pictures/10894.jpeg");
+    
+}
+/* .in{
+    float: left;
+} */
+
