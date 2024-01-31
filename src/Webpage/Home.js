@@ -9,7 +9,7 @@ const Home = (props) => {
     console.log(user);
     useEffect(()=>{
         setUser(data.userName)
-    },[])
+    },[data.userName])
   return (
     <div>
         <h1>welcome {user}</h1>

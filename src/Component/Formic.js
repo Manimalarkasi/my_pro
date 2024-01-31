@@ -8,12 +8,12 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import '../Webpage/My_page.css'
 // import { useNavigate } from 'react-router-dom';
-import { Form, Formik,Field, ErrorMessage } from 'formik';
+import { Form, Formik,Field } from 'formik';
 
 
 
 
-const Singup = () => {
+const Singupformik = () => {
   const [username,setUsername] = useState('');
     const [password , setPassword] = useState('');
     // const fun=useNavigate()
@@ -161,4 +161,4 @@ const Singup = () => {
   );
 }
 
-export default Singup
+export default Singupformik

@@ -1,0 +1,417 @@
+.log-ful{
+    background-image: url('C:\Users\SightSpectrum\Pictures\Saved Pictures/5.jpg');
+    color: blueviolet;
+    width: auto;
+}
+
+.login-paper{
+    padding: 15px;
+    width: 500px;
+    /* margin: 20px auto ; */
+    /* box-shadow: 13px 15px #2be234; */
+color: brown;
+background-color: aqua;
+    color: chartreuse;
+}
+.signin-full{
+    background-image: url("../image/10894.jpeg");
+    /* background-color: black;   */
+}
+.sign-paper{
+    width: 400;
+            padding: "30px 20px";
+            /* margin: "20px auto"; */
+            background-color: "violet";
+}
+.navbar{
+    height: 200px;
+
+    background-color: blueviolet;
+    color: rgb(9, 242, 250);
+    font-size:xx-large;
+    font-family:'fantasy';
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.logo{
+    display:flex;
+    align-items: center;
+    align-self:center;
+    color: aliceblue;
+    
+}
+.links{
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    color: aliceblue;
+}
+
+.nav-icon{
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-add{
+    background-color: chocolate;
+}
+.nav-content{
+    text-align: center;
+}
+
+.carttoon-full{
+    background-color: blue;
+    background-image: url('../image/g3.jpg');
+}
+.carttoon-img{
+    display: block;
+    width: 500px;
+}
+.cortton-side{
+    display: float;
+    float: right;
+    width: 300px;
+}
+.cortton-center{
+    display: float;
+    float: right;
+    width: 100px;
+}
+.g{
+    background-color: darkgreen;
+    position: relative;
+    animation-name: g;
+    float: right;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes g{
+    0%{
+        background-color: darkgoldenrod;
+        top: 0px;
+        right: 0px;
+    }
+    25%{
+        background-color:darkred;
+        top: 0px;
+        right: 800px;
+    }
+    50%{
+        background-color:deepskyblue;
+       top: 500px;
+       right: 800px;
+    }
+    75%{
+        background-color:gold;
+        top: 500px;
+       right: 100px;
+    }
+    100%{
+        background-color:mediumvioletred;
+        top: 0px;
+        right: 0px;
+    }
+}
+.g:hover{
+    transform: rotateX(75deg);
+}
+.b{
+    height: 200px;
+    width: 300px;
+    float: left;
+    border: 5px solid deeppink;
+    border-radius: 5px;
+    position: relative;
+    animation: b 6s linear 0s infinite reverse forwards;
+}
+.b:hover{
+    transform: skewY(30deg);
+}
+@keyframes b {
+    0%{
+       top: 0px;
+       left: 0px;
+       border-color: aqua;
+    }
+    25%{
+        top: 0px;
+        left: 800px;
+        border-color: blue;
+    }
+    50%{
+        top: 500px;
+        left: 800px;
+    }
+    75%{
+        top: 500px;
+        left: 100px;
+    }
+    100%{
+        top: 0px;
+       left: 0px;
+    }
+}
+.p{
+    height: 200px;
+    width: 300px;
+    margin-top: 250px;
+    /* float: right ; */
+    /* bottom: 6px; */
+     
+}
+.p:hover{
+    /* rotate: 100deg; */
+    scale: 2;
+}
+.title{
+    width: max-content;
+    font-size: 2em;
+    position: relative;
+    cursor: pointer;
+    margin: 50px auto;
+
+  }
+  .title::after{
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0px;
+      height: 4px;
+      width: 200px;
+      background-color: #00ff37;
+      transition: width 2s;
+      transition-timing-function: ease-in-out;
+       transform: scale(1);
+
+  }
+  .title:hover::after{
+      transform:scale(5,3);
+
+  }
+@media screen and (max-width:1000px){
+    .nav-icon{
+        display: flex;
+        cursor: pointer;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        /* left: -1%; */
+        right: 107%;
+        position:absolute;
+    width: 81.6%;
+        top: 250px;
+        background-color: blueviolet;
+    }
+    .links.active{
+        right: 7.5%;
+    }
+    .log-ful{
+        background-size: 98%;
+    }
+    .login-paper{
+        width: 50%;
+    }
+    .signin-full{
+        background-size: 100%;
+    }
+    .sign-paper{
+        width: 35%;
+    }
+}
+@media screen and (max-width:900px){
+    .nav-icon{
+        display: flex;
+        cursor: pointer;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        right: 108.5%;
+        position:absolute;
+        width: 79.4%;
+        top: 250px;
+        background-color: blueviolet;
+    }
+    .links.active{
+        right: 8.5%;
+    }
+    .log-ful{
+        background-size: 99%;
+    }
+    .login-paper{
+        width: 50%;
+    }
+}
+@media screen and (max-width:800px){
+    .nav-icon{
+        display: flex;
+        cursor: pointer;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        right: 109%;
+        position:absolute;
+        width: 77%;
+        top: 250px;
+        background-color: blueviolet;
+    }
+    .links.active{
+        right: 9%;
+    }
+    .log-ful{
+        background-size: 99%;
+    }
+    .login-paper{
+        width: 50%;
+    }
+}
+@media screen and (max-width:700px){
+    .nav-icon{
+        display: flex;
+        cursor: pointer;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       left: 111.5%;
+        position:absolute;
+        width: 75%;
+        top: 250px;
+        background-color: blueviolet;
+    }
+    .links.active{
+        left: 10.5%;
+    }
+    .log-ful{
+        background-size: 99%;
+    }
+    .login-paper{
+        width: 48%;
+    }
+    .register-paper{
+        width: 85%;
+    }
+    .nav-add{
+        width: 95%;
+    }
+    .register-full{
+        width: 70%;
+    }
+}
+@media screen and (max-width:600px){
+    .navbar{
+        width: 100%;
+    }
+    .nav-icon{
+        display: flex;
+        cursor: pointer;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       left: 112.5%;
+        position:absolute;
+        width: 75.5%;
+        top: 250px;
+        background-color: blueviolet;
+    }
+    .links.active{
+        left: 12.5%;
+    }
+    .log-ful{
+        background-size: 99%;
+    }
+    .login-paper{
+        width: 45%;
+    }
+    .register-paper{
+        width: 100%;
+    }
+    .nav-add{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px){
+    .navbar{
+        width:113%;
+    }
+    .nav-icon{
+        display: flex;
+        cursor: pointer;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       left: 116%;
+        position:absolute;
+        width: 79.5%;
+        top: 250px;
+        background-color: blueviolet;
+    }
+    .links.active{
+        left: 16%;
+    }
+    .log-ful{
+        background-size: 99%;
+    }
+    .login-paper{
+        width: 45%;
+    }
+    .register-paper{
+        width: 100%;
+    }
+    .nav-add{
+        width: 113%;
+    }
+}
+@media screen and (max-width:400px){
+    .navbar{
+        width: 155%;
+    }
+    .nav-icon{
+        display: flex;
+        cursor: pointer;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       left:128%;
+        position:absolute;
+        width: 95%;
+        top: 250px;
+        background-color: blueviolet;
+    }
+    .links.active{
+        left:18%;
+    }
+    .login-paper{
+        width: 70%;
+    }
+    .log-ful{
+        width: 154%;
+    }
+    .register-paper{
+        width: 100%;
+    }
+    .nav-add{
+        width: 100%;
+    }
+}
+    
+
+
+

@@ -1,0 +1,19 @@
+.curd-full{
+    /* height: 500px;
+    width: 500px; */
+    margin: 20px;
+    padding: 20px;
+    /* background-color: blue; */
+    /* display: flex; */
+    /* border: 15px solid red; */
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 14px 15px  5px 12px rebeccapurple; */
+}
+.createapi{
+  height: 500px;
+  width: 500px;
+  border: 5px solid yellowgreen;
+  box-shadow: 10px 10px 5px 6px blueviolet;
+  background-color: brown;
+}

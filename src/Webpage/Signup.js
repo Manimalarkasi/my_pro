@@ -9,21 +9,34 @@ import FormLabel from '@mui/material/FormLabel';
 import './My_page.css'
 import { useNavigate } from 'react-router-dom';
 import { Form, Formik,Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup'
+// import Home from './Home';
 
 
+const initialValues={
+  name:"",
+  phoneno:"",
+  email:"",
+  password:"",
+  confirmpassword:""
+}
+const onSubmit=(values,e) =>{
+  e.preventDefault();
+  console.log(values);
 
-
+}
+const validationSchema= Yup.object({
+  name:Yup.string().required('Requied'),
+  phoneno:Yup.number().lessThan(9999999999,'must be 10 digit').required('Requiede'),
+  email:Yup.string().email('invalid email format').required('Requiede'),
+  password:Yup.mixed().required('Requiede'),
+  confirmpassword:Yup.mixed().oneOf([Yup.ref("password")],'this password is not match').required('Required!'),
+})
 const Singup = () => {
   const [username,setUsername] = useState('');
     const [password , setPassword] = useState('');
-    const tonavigate=useNavigate()
-    const initialValues={
-      name:"",
-      phoneno:"",
-      email:"",
-      password:"",
-      confoirmpassword:""
-    }
+    const fun=useNavigate();
+    
     // const validalionschema=Yup.object().shape({
     //   name:Yup.string().required("Required")
     // })
@@ -34,16 +47,15 @@ const Singup = () => {
   const handlePasswordChange = (event) =>{
       setPassword(event.target.value)
   }
-  const onsubmit=(values,props) =>{
-    console.log(values);
-
-  }
+  
 
   const home=()=>{
-    tonavigate(`/Home/${username}`)
+    fun(`/nanbar`)
+    // tonavigate(<Home />)
   }
+
   return (
-    <div className='signin' >
+    <div className='signin-full' >
         <div className='in'>
       <Grid >
         <Paper
@@ -56,7 +68,7 @@ const Singup = () => {
           }}
         >
           <Grid align="center">
-            <Paper style={{ height: "50", width: 50, backgroundColor: "red" }}>
+            <Paper style={{ height: "50", width: 70, backgroundColor: "red" }} className='sign-paper'>
               <Avatar style={{ backgroundColor: "#ff8a00" }}>
                 <CardGiftcardRoundedIcon color="success" />
               </Avatar>
@@ -66,7 +78,7 @@ const Singup = () => {
               Plese fill this form to create an account !
             </Typography>
           </Grid>
-          <Formik initialValues={initialValues} onSubmit={onsubmit}>
+          <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema} validateOnMount>
             {(props) => (
               <Form>
                 {console.log(props)}
@@ -79,8 +91,13 @@ const Singup = () => {
                  onChange={handleUsernameChange}
                 autoFocus
                 required
-                
+                {...props.getFieldProps('name')}
               />
+              <ErrorMessage name='name'>
+                {
+                  error=><div className='error'>{error}</div>
+                }
+              </ErrorMessage>
               <Field as={TextField}
                 label="phone no"
                 name='phoneno'
@@ -89,6 +106,11 @@ const Singup = () => {
                 required
                 {...props.getFieldProps('phoneno')}
               />
+              <ErrorMessage name='phoneno'>
+                {
+                  error=><div className='error'>{error}</div>
+                }
+              </ErrorMessage>
               <FormControl>
                 <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
                 <RadioGroup
@@ -119,8 +141,12 @@ const Singup = () => {
                 variant="outlined"
                 style={{ margin: "10px", width: 300 }}
                 required
-                
               />
+              <ErrorMessage name='email'>
+                {
+                  error=><div className='error'>{error}</div>
+                }
+              </ErrorMessage>
               <TextField
                 label="password"
                 name='password'
@@ -133,22 +159,33 @@ const Singup = () => {
                 helperText='do not share yr password'
                 {...props.getFieldProps('password')}
               />
+              <ErrorMessage name='password'>
+                {
+                  error=><div className='error'>{error}</div>
+                }
+              </ErrorMessage>
               <TextField
-                label="confoirm password"
-                name='confoirm password'
+                label="confirm password"
+                name='confirmpassword'
                 variant="outlined"
                 type="password"
                 style={{ margin: "10px", width: 300 }}
                 required
-                {...props.getFieldProps('confoirm password')}
+                {...props.getFieldProps('confirmpassword')}
               />
+              <ErrorMessage name='confirmpassword'>
+                {
+                  error=><div className='error'>{error}</div>
+                }
+              </ErrorMessage>
               
               <FormControlLabel
                 control={<Checkbox name="checkeaA" />}
                 label="I accsept the terms & conditions."
                 required
               />
-              <Button type="submit" variant="contained" color="success" onClick={home} fullWidth>
+                {/* <Button variant='contained' color='success' type='submit' disabled={!props.isValid} onClick={home}>submit</Button> */}
+              <Button type="submit" variant="contained" color="success" onClick={home} disabled={!props.isValid} fullWidth>
                 Sign In
               </Button>
             </Form>

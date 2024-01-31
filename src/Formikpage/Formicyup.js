@@ -1,5 +1,5 @@
 import { Button, Stack, TextField } from '@mui/material'
-import { red } from '@mui/material/colors';
+// import { red } from '@mui/material/colors';
 import { useFormik } from 'formik'
 import React from 'react'
 import '../App.css'
@@ -49,12 +49,10 @@ const onSubmit= values =>{
 const validationSchema = Yup.object({
     firstname:Yup.string().min(3, 'must be at least 3 characters long').length(6,'max 6 charactor allowed').required('required!'),
     lastname:Yup.string().lowercase().required('required!'),
-    phoneno:Yup.number().max(10).lessThan(11,'must be 10 digit').required('requied'),
+    phoneno:Yup.number().max(10).lessThan(9999999999,'must be 10 digit').required('requied'),
     email:Yup.string().email('invalid email format').required('required'),
     password:Yup.string().required('required')
 })
-
-
 function Formicyup() {
     const formik = useFormik({
         initialValues,
@@ -62,7 +60,6 @@ function Formicyup() {
         // validate,
          validationSchema
     })
-
 // console.log('form values:', formik.values);
     console.log('form errors:',formik.errors);
     console.log('visited fields:' , formik.touched);

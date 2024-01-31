@@ -10,3 +10,8 @@
     background-color: aqua;
     text-align: left;
   }
+  .form{
+    text-align: left;
+    color:rgb(7, 7, 240);
+    /* text-transform: uppercase; */
+  }
