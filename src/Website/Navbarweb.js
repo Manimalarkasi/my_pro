@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {FiMenu,FiX} from 'react-icons/fi'
 import './Websitesty.css'
+import ben from '../image/g1.jpg'
 
 function Navbar() {
   const [open,setOpen] = useState(false)
@@ -14,7 +15,7 @@ function Navbar() {
     <>
         <nav className='navbar'>
         <Link to='/login' onClick={closemenu}>
-             <Avatar alt='Groot' src='./src/avathar/g14.jpg' sx={{ bgcolor: pink[500] }}/>
+             <Avatar alt='Groot' src={ben} sx={{ bgcolor: pink[500] ,padding:'20px' ,backgroundSize:'cover'}}/>
              I'm Groot
              </Link>
              
@@ -33,7 +34,7 @@ function Navbar() {
              </ul>
         </nav>
         <nav className='nav-add'>
-          <Link to='/Singup/'>SIGN UP</Link>
+          <Link to='/Singup/'>SIGNUP</Link>
           <Link to='/register/'>REGISTER</Link>
         </nav>
 

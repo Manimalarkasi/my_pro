@@ -45,7 +45,7 @@ background-color: aqua;
 }
 .links{
     display: flex;
-    gap: 5px;
+    gap: 10px;
     list-style: none;
     color: aliceblue;
 }
@@ -57,7 +57,13 @@ background-color: aqua;
 }
 
 .nav-add{
+    display: flex;
+align-items: center;
+justify-content: center;
     background-color: chocolate;
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
 }
 .nav-content{
     text-align: center;

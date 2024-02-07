@@ -5,15 +5,15 @@ import './App.css';
 import './Webpage/My_page.css'
 import './Website/Websitesty.css';
 // import Formikcall from './Formikpage/Formikcall';
-// import Websitecall from './Website/Websitecall';
+import Websitecall from './Website/Websitecall';
 // import Singupformik from './Component/Formic';
 import Mockapicall from './Mockapi/Mockapicall';
 
 function App() {
   return (
     <div className="App">
-      <Mockapicall />
-      {/* <Websitecall /> */}
+      {/* <Mockapicall /> */}
+      <Websitecall />
       {/* <Webpagecall /> */}
       {/* <Formikcall /> */}
       {/* <Buttonsmui /> */}

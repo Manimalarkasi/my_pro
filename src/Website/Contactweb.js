@@ -8,6 +8,7 @@ function Contactweb() {
       <img className='g' src="image/g0.jpg" alt="g"/>
       <img className='b' src="image/44.jpg" alt="b" />
       <img className='p' src="image/8.jpg" alt="p"/>
+      <img src='image/00.ipg' />
       <pre  style={{textAlign:'center',justifyContent:'center',marginTop:300}}> 
         <h2><i> manimalar </i></h2>
       </pre>
